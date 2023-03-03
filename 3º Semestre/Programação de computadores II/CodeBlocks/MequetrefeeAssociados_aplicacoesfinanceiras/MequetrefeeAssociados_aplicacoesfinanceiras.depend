@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1618270739 source:c:\users\arauj\desktop\faculdade\3º semestre\programação de computadores ii\codeblocks\mequetrefeeassociados_aplicacoesfinanceiras\main.cpp
+	<iostream>
+	<locale>
+	<iomanip>
+	<stdlib.h>
+

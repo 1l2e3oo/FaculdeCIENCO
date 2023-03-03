@@ -1,0 +1,12 @@
+﻿{
+	"Title" : "Resize",
+	"ResizeImageAndCanvas" : "Resize image together with canvas",
+	"ResizeCanvasOnly" : "Resize canvas but keep image size",
+	"NewSize" : "New Size",
+	"Width" : "Width:",
+	"Height" : "Height:",
+	"KeepAspectRatio" : "Keep Aspect Ratio",
+	"Anchor" : "Anchor",
+	"OK" : "OK",
+	"Cancel" : "Cancel"
+}

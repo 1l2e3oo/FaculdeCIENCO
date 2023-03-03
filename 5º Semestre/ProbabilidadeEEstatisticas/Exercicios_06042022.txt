@@ -1,0 +1,38 @@
+
+
+	I->Um administrador hospitalar faz uma pesquisa com pessoas que estão na fila para serem atendidas pelo sus
+
+		1-Para realizar esta pesquisa o administrador resolve entrevistar 
+			uma a cada 10 pessoas da fila,
+			que tipo de amostragem ele realizlou?
+
+
+
+
+
+
+
+		2-As pessoas desta fila foram divididas em tres grupos de acordo com sua doença, 
+			cujos tamanhos são,
+
+			N1=40
+			N2=100
+			N3=60
+
+
+			Sabendo que ao ser realizada uma amostragem estraficada, 
+				nove elementos foram retirados do terceiro grupo.
+			Determine o total de elementos da amostra ou seja, nº de entrevistados.
+
+
+
+
+	II-> Suponha que temos uma população de 250 elementos, queremos montar uma amostra usando um elemento 
+	em cada 25 elementos da população a partir do segundo elemento.
+
+		Que tipo de amostragem devemos fazer?
+
+
+
+		Qual deve ser a nossa amostra?
+

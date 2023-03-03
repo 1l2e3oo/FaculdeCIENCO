@@ -1,0 +1,14 @@
+﻿{
+	"DialogTitle" : "JPEG选项",
+	"Quality" : "质量：",
+
+	"QualitySuperb" : "优秀",
+	"QualityGood" : "较好",
+	"QualityNormal" : "正常",
+	"QualityAverage" : "马虎",
+	"QualityBad" : "较差",
+	"Progressive" : "渐进模式（网页用）",
+	"CompressedSize" : "压缩后文件大小：",
+	"OK" : "确定",
+	"Cancel" : "取消"
+}

@@ -1,0 +1,71 @@
+/*
+
+Aula 04 -  Práticas de programação: Estrutura de dados (vetor e matriz) em C++
+Disciplina: Linguagem de Programação II - 3º CIENCO
+Prof. Robson Canato
+Data: 23/03/21
+
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+1-) Desenvolva um programa que preenche um vetor com N números aleatórios. Com base no vetor criado anteriormente, 
+você deve criar mais dois vetores. Em um desses vetores deverá ser armazendo os números em ordem crescente e no 
+outro vetor em ordem decrescente. Ao final, seu programa deve mostrar os três vetores, ou seja, o vetor original, o vetor 
+em ordem crescente e o vetor em ordem decrescente.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+2-) Desenvolva um programa que carrega em um vetor 10 caracteres entre A e Z de forma aleatória. Seu programa deve 
+mostrar o vetor com os caracteres gerados aleatoriamente.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+3-) Desenvolva uma nova versão do seu programa anterior onde seja implementado a saída da quantidade de quantas 
+vogais e quantas consoantes foram geradas aleatóriamente.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+
+4-) Programa que carrega um vetor com 10 números inteiros entre 1 e 50 gerados aleatóriamente. Seu programa deve 
+mostrar os 10 números gerados. Além disso,  mostrar separadamente os números pares, números ímpares e números 
+primos, caso existam, repetidos ou não. 
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+5-) Utilizando a linguagem C++ e a estrutura de matriz, desenvolva um programa que carrega uma matriz quadrada com 
+números aleatório ou fornecidos pelo usuário. Seu programa deve mostrar a matriz carregada originalmente. Além disso,
+deve mostrar os valores que correspondem a diagonal principal e a diagonal secundária, separadamente.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+6-) Desenvolva uma nova versão do programa anterior e implemente a funcionalidade que soma e mostra a soma dos
+elementos da diagonal principal e da diagonal secundária.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+7-) Com base em uma matrzi quadrada, desenvolva um programa que carrega os valores nessa matriz, podendo serem
+gerados aleatoriamente ou informados pelo usuário. Seu programa deve mostrar a matriz original e a soma de cada linha
+e de cada uma das colunas da matriz gerada.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

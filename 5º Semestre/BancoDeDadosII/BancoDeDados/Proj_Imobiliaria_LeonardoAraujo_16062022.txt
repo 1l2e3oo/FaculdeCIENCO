@@ -1,0 +1,418 @@
+CREATE DATABASE Imobiliaria;
+
+USE Imobiliaria;
+
+CREATE TABLE Cliente (
+idCliente int PRIMARY KEY,
+nomeCliente varchar(100),
+dataInclusao date,
+cpfCliente varchar(11),
+telefoneCliente varchar(9)
+)
+
+
+CREATE TABLE Colaborador (
+idColaborador int PRIMARY KEY,
+cpfColaborador varchar(11),
+nomeColaborador varchar(100),
+telefoneColaborador varchar(9),
+dataInclusao date
+)
+
+
+CREATE TABLE Categoria (
+idCategoria int PRIMARY KEY,
+descricaoCategoria varchar(100)
+)
+
+
+CREATE TABLE Imovel (
+idImovel int PRIMARY KEY,
+valorLocacaoImovel decimal(10,2),
+descricaoImovel varchar(200),
+idCategoria int
+)
+
+
+CREATE TABLE Locacao (
+idLocacao int PRIMARY KEY,
+dataInicial date,
+dataFinal date,
+idColaborador int,
+idCliente int,
+idImovel int,
+FOREIGN KEY(idColaborador) REFERENCES Colaborador (idColaborador),
+FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)
+)
+
+
+-----------------------------------------------------------------------------------------
+
+
+INSERTS:
+
+TABELA CLIENTE
+
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (1, 'Maria', '11111111111', '111111111');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (2, 'Ana', '22222222222', '222222222');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (3, 'José', '33333333333', '333333333');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (4, 'Pedro', '44444444444', '444444444');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (5, 'Paulo', '55555555555', '555555555');
+
+TABELA COLABORADOR
+
+INSERT INTO Colaborador(idColaborador, nomeColaborador, cpfColaborador, telefoneColaborador) VALUES (1, 'Carlos', '12121212121', '121212121');
+INSERT INTO Colaborador(idColaborador, nomeColaborador, cpfColaborador, telefoneColaborador) VALUES (2, 'Julia', '21212121212', '212121212');
+
+TABELA CATEGORIA 
+
+INSERT INTO Categoria(idCategoria, descricaoCategoria) VALUES(1, 'Casa');
+INSERT INTO Categoria(idCategoria, descricaoCategoria) VALUES(2, 'Apartamento');
+
+TABELA IMOVEL
+
+INSERT INTO Imovel(idImovel, descricaoImovel, valorLocacaoImovel, idCategoria) VALUES (1, 'Linda casa no centro de Mogi Guaçu...', 1600.00, 1);
+INSERT INTO Imovel(idImovel, descricaoImovel, valorLocacaoImovel, idCategoria) VALUES (2, 'Apartamento decorado localizado na área nobre...', 2100.00, 2);
+
+TABELA LOCACAO
+
+INSERT INTO Locacao(idLocacao, idCliente, idColaborador, idImovel, dataInicial) VALUES (1, 1, 1, 1, '2022-06-20');
+INSERT INTO Locacao(idLocacao, idCliente, idColaborador, idImovel, dataInicial) VALUES (2, 2, 1, 2, '2022-06-21');
+
+
+-----------------------------------------------------------------------------------------
+
+1-) Criar uma trigger que ao inserir um cliente, seja inserido pela trigger a data atual no campo data de Inclusão.
+
+2-) Alterar a tabela Cliente, adicionando a ela uma nova coluna de nome atualizacaoCliente do tipo date.
+
+3-) Criar uma trigger que ao realizar uma atualização na tabela Cliente atualize o campo atualizacaoCliente com a data atual.
+
+4-) Criar uma trigger que ao inserir um colaborador, seja inserido pela trigger a data atual no campo data de Inclusão.
+
+5-) Alterar a tabela Colaborador, adicionando a ela uma nova coluna de nome atualizacaoColaborador do tipo date.
+
+6-) Criar uma trigger que ao realizar uma atualização na tabela Colaborador atualize o campo atualizacaoColaborador com a data atual.
+
+7-) Criar uma trigger que ao inserir uma locacao, seja inserido pela trigger a data final, considerando-se para isso a data inicial acrescida de 18 meses.
+
+8-) Alterar a tabela Imóvel adicionando a coluna valorIPTU do tipo decimal de 10 posições com dois digitos.
+
+9-) Criar uma trigger que no momento da inserção da tabela imóvel preencha o campo valorIptu considerando-se um percentual de 3% sobre o valor da locação do imóvel.
+
+10-) Criar uma consulta (através de view) para dois relatórios que achar pertinente.
+
+11-) Criar indice para as tabelas Cliente, Imóvel e Locação.
+
+12-) Testar a consulta com os indices usando a cláusula explain.
+
+13-) Criar ao menos mais 3 triggers que julgar interessante.
+
+-----------------------------------------------------------------------------------------
+
+Anotações / Sintaxes:
+
+CREATE TABLE Aluno(
+idAluno int primary key auto_increment,
+nomeAluno varchar(100),
+INDEX (nomeAluno));
+
+CREATE INDEX idx_nomeAluno ON Aluno (nomeAluno);
+
+DESC Veiculo;
+
+CREATE INDEX idx_anoModelo ON Veiculo (anoModelo);
+
+
+----------
+
+SELECT *
+FROM Curso;
+
+DELETE
+FROM Curso 
+WHERE idCurso = 2;
+
+SELECT *
+FROM logCurso;
+
+DESC Aluno;
+
+Alterar a tabela aluno adicionando uma nova coluna de nome data de inserção
+ALTER TABLE Aluno ADD COLUMN dataCadastro date;
+
+INSERT INTO Aluno (nomeAluno, dataCadastro) VALUES('Luiz', now());
+
+SELECT * FROM Aluno;
+
+Alterar a tabela alunpo adicionando uma nova coluna de nome validade do cadastro
+ALTER TABLE Aluno ADD COLUMN dataValidade date;
+
+INSERT INTO Aluno (nomeAluno, dataCadastro, dataValidade) VALUES('Maria', now(), date_add(now(), interval 10 year));
+
+CREATE TABLE Aula(
+idAula int primary key auto_increment,
+dataInclusao date);
+
+CREATE TRIGGER trg_insertAula BEFORE INSERT
+ON aula 
+FOR EACH ROW
+SET NEW.dataInclusao = now();
+
+INSERT INTO Aula() values();
+
+SELECT *
+FROM Aula;
+
+SHOW TRIGGERS;
+SHOW TABLES;
+
+
+---------------------------
+
+
+
+CREATE DATABASE Imobiliaria;
+
+USE Imobiliaria;
+
+CREATE TABLE Cliente (
+idCliente int PRIMARY KEY,
+nomeCliente varchar(100),
+dataInclusao date,
+cpfCliente varchar(11),
+telefoneCliente varchar(9)
+);
+/*---------------------------------------------------------------------------------------------------------------
+1-) Criar uma trigger que ao inserir um cliente, seja inserido pela trigger a data atual no campo data de Inclusão.
+*/
+
+create trigger trg_Data before insert on Cliente for each row
+set new.dataInclusao = now();
+
+/*
+2-) Alterar a tabela Cliente, adicionando a ela uma nova coluna de nome atualizacaoCliente do tipo date.
+*/
+
+ALTER TABLE cliente
+ADD COLUMN atualizacaoCliente DATE;
+
+/*
+3-) Criar uma trigger que ao realizar uma atualização na tabela Cliente atualize o campo atualizacaoCliente com a data atual.
+*/
+
+create trigger trg_DataUp before update on cliente for each row
+set new.dataInclusao = now();
+
+/*
+11-) Criar indice para as tabelas Cliente, Imóvel e Locação.
+*/
+
+create index idx_nomeCliente on cliente (nomeCliente);
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+CREATE TABLE Colaborador (
+idColaborador int PRIMARY KEY,
+cpfColaborador varchar(11),
+nomeColaborador varchar(100),
+telefoneColaborador varchar(9),
+dataInclusao date
+);
+
+/*----------------------------------------------------------------------------------------------------------------------------
+4-) Criar uma trigger que ao inserir um colaborador, seja inserido pela trigger a data atual no campo data de Inclusão.*/
+
+create trigger trg_ColData before insert on Colaborador for each row
+set new.dataInclusao =now();
+
+/*5-) Alterar a tabela Colaborador, adicionando a ela uma nova coluna de nome atualizacaoColaborador do tipo date.*/
+
+alter table colaborador
+add column atualizacaoColaborador date;
+
+/*6-) Criar uma trigger que ao realizar uma atualização na tabela Colaborador atualize o campo atualizacaoColaborador com a data atual.*/
+
+create trigger trg_AttCol before update on colaborador for each row
+set new.atualizacaoColaborador = now();
+
+
+
+CREATE TABLE Categoria (
+idCategoria int PRIMARY KEY,
+descricaoCategoria varchar(100)
+);
+
+
+CREATE TABLE Imovel (
+idImovel int PRIMARY KEY,
+valorLocacaoImovel decimal(10,2),
+descricaoImovel varchar(200),
+idCategoria int
+);
+
+/*
+8-) Alterar a tabela Imóvel adicionando a coluna valorIPTU do tipo decimal de 10 posições com dois digitos.
+*/
+
+alter table Imovel
+add column valorIPTU decimal(10,2);
+
+/*
+9-) Criar uma trigger que no momento da inserção da tabela imóvel preencha o campo valorIptu 
+considerando-se um percentual de 3% sobre o valor da locação do imóvel.
+*/
+
+create trigger trg_valoriptu before insert on imovel for each row
+set new.valorIPTU=(new.valorLocacaoImovel*0.03);
+
+/*
+11-) Criar indice para as tabelas Cliente, Imóvel e Locação.
+*/
+
+create index idx_descricaoImovel on imovel (descricaoImovel);
+
+CREATE TABLE Locacao (
+idLocacao int PRIMARY KEY,
+dataInicial date,
+dataFinal date,
+idColaborador int,
+idCliente int,
+idImovel int,
+FOREIGN KEY(idColaborador) REFERENCES Colaborador (idColaborador),
+FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)
+);
+
+desc locacao;
+
+/*
+7-) Criar uma trigger que ao inserir uma locacao, seja inserido pela 
+trigger a data final, considerando-se para isso a data inicial acrescida de 18 meses.
+*/
+
+create trigger trg_DataFinal before insert on locacao for each row
+set new.dataFinal=date_add(new.dataInicial, interval 18 month);
+
+
+
+/*
+10-) Criar uma consulta (através de view) para dois relatórios que achar pertinente.
+*/
+create or replace view ClienteDescImovel as
+select nomeCliente 'Nome do Cliente', descricaoImovel 'Descrição do Imovel'
+from cliente, imovel, locacao
+where cliente.idcliente = locacao.idcliente
+and imovel.idimovel = locacao.idimovel;
+
+select*from ClienteDescImovel;
+
+/*
+11-) Criar indice para as tabelas Cliente, Imóvel e Locação.
+*/
+
+create index idx_dataInicial on locacao (dataInicial);
+
+
+/*
+12-) Testar a consulta com os indices usando a cláusula explain.
+*/
+explain select * from ClienteDescImovel;
+
+
+/*-----------------------------------------------------------------------------------------------------
+13-) Criar ao menos mais 3 triggers que julgar interessante.
+*/
+
+create table logLocacao(
+idLogLocacao int primary key auto_increment,
+descLogLocacao varchar(100),
+idLocacao int
+);
+
+create trigger trglogin after insert on locacao for each row
+insert into logLocacao (descLogLocacao,idLocacao) values ('Nova Locação', new.idLocacao);
+
+create trigger trglogup after update on locacao for each row
+insert into logLocacao (descLogLocacao,idLocacao) values ('Alteração de Locação', new.idLocacao);
+
+create trigger trglogdel after delete on locacao for each row
+insert into logLocacao (descLogLocacao,idLocacao) values ('Locação Deletada', old.idLocacao);
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+INSERTS:
+
+TABELA CLIENTE
+
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (1, 'Maria', '11111111111', '111111111');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (2, 'Ana', '22222222222', '222222222');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (3, 'José', '33333333333', '333333333');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (4, 'Pedro', '44444444444', '444444444');
+INSERT INTO Cliente(idCliente, nomeCliente, cpfCliente, telefoneCliente) VALUES (5, 'Paulo', '55555555555', '555555555');
+
+TABELA COLABORADOR
+
+INSERT INTO Colaborador(idColaborador, nomeColaborador, cpfColaborador, telefoneColaborador) VALUES (1, 'Carlos', '12121212121', '121212121');
+INSERT INTO Colaborador(idColaborador, nomeColaborador, cpfColaborador, telefoneColaborador) VALUES (2, 'Julia', '21212121212', '212121212');
+
+TABELA CATEGORIA 
+
+INSERT INTO Categoria(idCategoria, descricaoCategoria) VALUES(1, 'Casa');
+INSERT INTO Categoria(idCategoria, descricaoCategoria) VALUES(2, 'Apartamento');
+
+TABELA IMOVEL
+
+INSERT INTO Imovel(idImovel, descricaoImovel, valorLocacaoImovel, idCategoria) VALUES (1, 'Linda casa no centro de Mogi Guaçu...', 1600.00, 1);
+INSERT INTO Imovel(idImovel, descricaoImovel, valorLocacaoImovel, idCategoria) VALUES (2, 'Apartamento decorado localizado na área nobre...', 2100.00, 2);
+
+TABELA LOCACAO
+
+INSERT INTO Locacao(idLocacao, idCliente, idColaborador, idImovel, dataInicial) VALUES (1, 1, 1, 1, '2022-06-20');
+INSERT INTO Locacao(idLocacao, idCliente, idColaborador, idImovel, dataInicial) VALUES (2, 2, 1, 2, '2022-06-21');
+
+select*from colaborador;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

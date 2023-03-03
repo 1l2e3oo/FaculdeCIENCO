@@ -1,0 +1,113 @@
+Como mencionado anteriormente, uma trigger (gatilho) pode executar mais de um comando a cada vez que é disparada (quando um evento ocorre). Neste caso, quando precisamos executar mais de um comando é necessário que os comandos estejam entre um BEGIN e END. Além disso, é necessário definir um delimitador antes da declaração da trigger e ao término das instruções. Os exemplos a seguir (após a criação das tabelas referenciadas pela trigger) ilustram a utilização desses comandos:
+
+Criação das tabelas referênciadas pela trigger:
+
+CREATE TABLE Aluno(
+idAluno int primary key auto_increment,
+nomeAluno varchar(100));
+
+CREATE TABLE Matricula(
+idMatricula int primary key auto_increment,
+idAluno int,
+dataMatricula date);
+
+CREATE TABLE logAluno(
+idLog int primary key auto_increment,
+idAluno int,
+nomeAluno varchar(100),
+descricao varchar(100),
+dataOperacao date);
+
+Criação da trigger com mais de um comando:
+
+DELIMITER $
+
+CREATE TRIGGER exemploComandos AFTER INSERT
+ON Aluno
+FOR EACH ROW
+BEGIN
+INSERT INTO Matricula (idAluno, dataMatricula) VALUES (new.idAluno, now());
+INSERT INTO logAluno (idAluno, nomeAluno, descricao, dataOperacao) VALUES (new.idAluno, new.nomeAluno, 'aluno matriculado', now());
+END;
+
+$
+
+
+Inserção na tabela aluno para teste (disparo) da trigger:
+
+INSERT INTO Aluno (nomeAluno) VALUES ('Pedro');
+
+
+Select nas tabelas para verificação do insert e do funcionamento da trigger: 
+
+SELECT * FROM aluno;
+SELECT * FROM matricula;
+SELECT * FROM logAluno;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Mais um exemplo de trigger com múltiplos comandos:
+
+Criação das tabelas referenciadas pela trigger:
+
+CREATE TABLE Tabela1(
+idTabela1 int,
+descricaoTabela1 varchar(100));
+
+CREATE TABLE Tabela2(
+idTabela2 int,
+descricaoTabela2 varchar(100));
+
+
+CREATE TABLE Tabela3(
+idTabela3 int primary key,
+descricaoTabela3 varchar(100));
+
+
+CREATE TABLE Tabela4(
+idTabela4 int primary key,
+contagemTabela4 int);
+
+
+Criação da trigger com múltiplos comnandos:
+
+DELIMITER /
+
+CREATE TRIGGER trgExemploComandos2 BEFORE INSERT 
+ON Tabela1
+FOR EACH ROW
+BEGIN
+INSERT INTO Tabela2 (idTabela2, descricaoTabela2) VALUES (NEW.idTabela1, 'inserido na tabela 1');
+DELETE FROM Tabela3 WHERE idTabela3 = NEW.idTabela1;
+UPDATE Tabela4 SET contagemTabela4 = contagemTabela4 + 1 WHERE idTabela4 = NEW.idTabela1;
+END;
+
+/
+
+Insert e select nas tabelas para teste da trigger:
+
+INSERT INTO TABELA3 (idTabela3, descricaoTabela3) VALUES (1, 'registro 1 tabela 3');
+INSERT INTO TABELA3 (idTabela3, descricaoTabela3) VALUES (2, 'registro 2 tabela 3');
+INSERT INTO TABELA3 (idTabela3, descricaoTabela3) VALUES (3, 'registro 3 tabela 3');
+INSERT INTO TABELA3 (idTabela3, descricaoTabela3) VALUES (4, 'registro 4 tabela 3');
+
+SELECT * FROM TABELA3;
+
+INSERT INTO TABELA4 (idTabela4, contagemTabela4) VALUES (1, 0);
+INSERT INTO TABELA4 (idTabela4, contagemTabela4) VALUES (2, 0);
+INSERT INTO TABELA4 (idTabela4, contagemTabela4) VALUES (3, 0);
+INSERT INTO TABELA4 (idTabela4, contagemTabela4) VALUES (4, 0);
+
+SELECT * FROM TABELA4;
+
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (1, 'registro 1 tabela 1');
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (2, 'registro 2 tabela 1');
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (3, 'registro 3 tabela 1');
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (4, 'registro 4 tabela 1');
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (4, 'registro 4 tabela 1');
+INSERT INTO TABELA1 (idTabela1, descricaoTabela1) VALUES (4, 'registro 4 tabela 1');
+
+SELECT * FROM TABELA1;
+SELECT * FROM TABELA2;
+SELECT * FROM TABELA3;
+SELECT * FROM TABELA4

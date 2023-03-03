@@ -1,0 +1,74 @@
+1- What?
+
+Deep Web é o nome dado à camada da internet que não pode ser acessada por meio de mecanismos de pesquisa, 
+como Google ou o navegador que você usa, seja Chrome, Safari ou Edge. Pelo menos não sem usar algumas ferramentas.
+
+
+2- What?
+
+Em grande parte, a deep web existe, assim como a própria Internet, graças ao poderio militar dos Estados Unidos. 
+Neste caso, graças ao Laboratório de Pesquisa da Marinha do país, que desenvolveu o The Onion Routing para abordar propostas de pesquisa, 
+design e análise de sistemas de comunicação anônima. A segunda geração deste projeto foi liberada para uso não governamental, apelidada de TOR e, 
+desde então, vem evoluindo ...
+
+
+3- Why?
+
+Cibercriminosos e espiões oferecem seus serviços, e há pessoas que garantem fazer trabalhos acadêmicos sobre qualquer assunto, sem copiar de qualquer lugar. 
+Os sites promovem o turismo sexual e, por menos de US $ 1.000, prometem buscar o comprador no aeroporto. Outro destaque é a venda de documentos falsos, 
+com páginas que até oferecem cidadania norte-americana. O dinheiro foi abolido na deep web e poucos comerciantes confiam no PayPal. O negócio real é o Bitcoin,
+uma moeda digital que torna as transações mais seguras.
+
+
+4- Why?
+
+Por meio de fóruns e redes de comunicação, são comercializados todos os tipos de informações que um ataque digital pode acessar. 
+E sempre há um público preparado para aproveitar essas informações.
+
+
+5- For what?
+
+Na Deep Web também existem grupos que viram uma oportunidade de se encontrar lá. Ativistas, políticos e usam a deep web para trocar informações, produtos e 
+interagir uns com os outros. Por isso, a rede submersa também é lembrada por ser o local de venda de diversos itens, desde dados confidenciais a armas e 
+drogas ilegais. Alguns dizem que até seres humanos e órgãos são comercializados ali, para servir de representação ao nome Dark Web. Resumindo, a Deep Web é o 
+lugar onde todos os tipos de informações podem ser encontrados. Apenas saiba onde e com quem procurar.
+
+
+6- How?
+
+A deep web surgiu graças ao Laboratório de Pesquisa da Marinha dos Estados Unidos, que criou o The Onion Routing, um sistema de comunicação secreto que seria 
+responsável pelo envio de dados e análises de sistemas pela internet de forma anônima.
+
+No entanto, em 2006, uma versão do projeto para fins não governamentais foi lançada, intitulada TOR (abreviação de The Onion Routing). A palavra 
+significa "cebola", em português, referindo-se às várias camadas que existem na cebola, semelhantes às camadas que um internauta deve percorrer para chegar 
+ao conteúdo desejado em algum site deep web.
+
+
+7- Discussion
+
+A deep web é ilegal?
+
+De acordo com a legislação brasileira, o acesso à deep web não é ilegal. O que pode ser considerado ilegal, em alguns casos, é o tipo de atividade ou 
+interação que o indivíduo desenvolve neste local.
+
+
+8- Results
+
+Os grupos pró-liberdade de expressão são os maiores defensores do Tor, pois através da rede Onion é possível falar anonimamente e, teoricamente, sem 
+ser interceptado, dando voz a todos, passando por quem luta contra regimes ditatoriais, funcionários insatisfeitos.
+
+A ONG já recebeu apoio da Electronic Frontier Foundation, Human Rights Watch e até da National Christian Foundation, mas também reconhece dinheiro de empresas 
+como o Google e órgãos oficiais - o governo dos EUA, aliás, é um dos principais investidores.
+
+
+9- Conclusion
+
+Ao acessar um site normalmente, seu computador se conecta a um servidor que pode identificar o IP; isso não acontece com o Tor, pois, 
+antes que sua solicitação chegue ao servidor, entra em cena uma rede anônima de computadores que fazem pontes criptografadas para o site desejado.
+
+Assim, é possível identificar o IP que atingiu o destinatário, mas não a máquina anterior, nem a anterior, nem a anterior, etc. 
+Chegar ao usuário, então, é praticamente impossível. Existem também serviços invisíveis de hospedagem e armazenamento. Assim, o dono da página está seguro 
+caso não queira ser encontrado.
+
+
+

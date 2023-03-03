@@ -1,0 +1,12 @@
+Domingo na Franco - Consultas 
+
+1-) Atração com o maior número de visitas
+2-) Atração com o menor número de visitas
+3-) Colaboradores por atração
+4-) Quantidade de visitantes sem veículos
+5-) Quantidade de visitantes com veiculos
+6-) Quantidade de atração por categoria
+7-) Quantidade de colaboradores alunos
+8-) Quantidade de colaboradores não alunos
+9-) Quantidade de atrações
+10-) Categoria de atração mais visitada

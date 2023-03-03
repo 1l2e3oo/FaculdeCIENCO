@@ -1,0 +1,13 @@
+<canvas id="myCanvas" width="350" height="200" style="border:1px solid
+#d3d3d3;">Se seu navegador não suportar você verá esta mensagem.
+</canvas>
+ <script>
+ var c = document.getElementById("myCanvas");
+ var ctx = c.getContext("2d");
+ // gradiente
+ var grd = ctx.createLinearGradient(0, 0, 400, 0);
+ grd.addColorStop(0, "red");
+ grd.addColorStop(1, "white");
+ ctx.fillStyle = grd;
+ ctx.fillRect(20, 20, 300, 160);
+ </script>

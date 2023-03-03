@@ -1,0 +1,62 @@
+#include <iostream>
+#include <locale>
+#include <iomanip>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    float c = 0;  //Capital que sera aplicada
+    int p = 0; //Periodo em que sera aplicado
+    int op = 0;
+    float vm = 0; //Valor Montante
+
+    cout << fixed << setprecision(2);
+
+    cout << "Entre com o capital que deseja investir: ";
+    cin  >> c;
+    cout << "Entre com a quantidade de mêses que deseja manter o investimento: ";
+    cin  >> p;
+
+
+    cout << "       Entre com opção desejada: " << endl;
+    cout << "   1 - Poupança Simples (Capital mínimo 100.00, Juros de 1.00 % ao mês e tempo mínimo de aplicação de 3 meses)\n";
+    cout << "   2 - Poupança Plus (Capital mínimo 500.00, Juros de 1.50 % ao mês e tempo mínimo de aplicação de 6 meses)\n";
+    cout << "   3 - Poupança Mega (Capital mínimo 1000.00, Juros de 2.00 % ao mês e tempo mínimo de aplicação de 12 meses)\n";
+    cin  >> op;
+
+    system("cls || clear");
+
+    switch(op)
+    {
+    case 1:
+        if(c >= 100 && c < 500 && p >= 3){
+        vm = c + ((0.01* p) * 100);
+        cout << "Poupança Simples - " << "R$" << vm << " " <<  p << " meses";
+        } else {
+            cout << "Operação inválida...Escolha outra opção!";
+        }
+        break;
+    case 2:
+        if(c >= 500 && c < 1000 && p >= 6){
+         vm = c + ((0.015 * p) * 100);
+         cout << "Poupança Plus - " << "R$" << vm << " " << p << " meses";
+        } else {
+           cout << "Operação inválida...Escolha outra opção!";
+        }
+         break;
+    case 3:
+        if(c >= 1000 && p >= 12){
+        vm = c + ((0.02 * p) * 100);
+        cout << "Poupança Plus - " << "R$" << vm << " " << p << " meses";
+        } else {
+            cout << "Operação inválida... Escolha outra opção!";
+        }
+        break;
+    default:
+        cout << "Operação inválida... Escolha outra opção!";
+
+    }
+}

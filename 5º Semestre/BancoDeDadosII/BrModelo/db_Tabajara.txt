@@ -1,0 +1,48 @@
+-- Geração de Modelo físico
+-- Sql ANSI 2003 - brModelo.
+
+
+
+CREATE TABLE Prestador (
+idPrestador int PRIMARY KEY,
+Nome varchar(100),
+Telefone varchar(11),
+Email varchar(100),
+CNPJ varchar(14)
+)
+
+CREATE TABLE Venda (
+idVenda int PRIMARY KEY,
+DataVenda date,
+idCliente int
+)
+
+CREATE TABLE Servicos (
+idServicos int PRIMARY KEY,
+Descricao varchar(1000),
+Nome varchar(100)
+)
+
+CREATE TABLE Cliente (
+idCliente int PRIMARY KEY,
+Nome varchar(100),
+Email varchar(100),
+Telefone varchar(11),
+CPF varchar(11),
+ValorServico float
+)
+
+CREATE TABLE TrabalhadoresServicos (
+idServicos int,
+idPrestador int,
+FOREIGN KEY(idServicos) REFERENCES Servicos (idServicos),
+FOREIGN KEY(idPrestador) REFERENCES Prestador (idPrestador)
+)
+
+CREATE TABLE ServicosNotaFiscal (
+idServicos int,
+idVenda int,
+FOREIGN KEY(idServicos) REFERENCES Servicos (idServicos)/*falha: chave estrangeira*/
+)
+
+ALTER TABLE Venda ADD FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)

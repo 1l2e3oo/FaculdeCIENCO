@@ -1,0 +1,271 @@
+/*
+
+Aula 04 -  Práticas de programação: Estrutura de dados (vetor e matriz) em C++
+Disciplina: Linguagem de Programação II - 3º CIENCO
+Prof. Robson Canato
+Data: 23/03/21
+
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+1-) Desenvolva um programa que preenche um vetor com N números aleatórios. Com base no vetor criado anteriormente, 
+você deve criar mais dois vetores. Em um desses vetores deverá ser armazendo os números em ordem crescente e no 
+outro vetor em ordem decrescente. Ao final, seu programa deve mostrar os três vetores, ou seja, o vetor original, o vetor 
+em ordem crescente e o vetor em ordem decrescente.
+*/
+
+
+#include <iostream>
+#define N 10
+
+using namespace std;
+
+int main()
+{
+	int ax;  // ax = auxiliar
+	int vo [N];  //  vo = Vetor Original
+	int vc [N];  //  vc = Vetor Crescente
+	int vd [N];  //  vd = Vetor Decrecente
+
+	srand (time(NULL));
+
+	for (int i = 0; i < N;  i++)
+	{
+
+	vo[i] = rand() % 50 + 1;
+	vc[i] = vo [i];
+	vd[i] = vo[i];	
+
+	}
+
+	for(int i = 0; i < N; i++;)
+	{
+	  for(int j = i + 1; j < N; j++)
+	{
+	 
+	  {
+	   if(vc[i] > vc[j])
+	   ax = vc[i];
+	   vc[i] = vc[j];
+	   vc[j] = ax
+	   }
+	
+	
+	}
+	
+	for(int i = 0; i < N; i++)
+	{
+	for (int j = i + 1; j < N; j++)
+	  {
+	     {
+	      if(vd [i] < vd [j])
+	      ax = vc [i];
+	      vd[i] = vd[j];
+	      vd[j] = ax;
+	      }
+	    
+	  }
+
+
+
+
+	}	
+
+	cout <<"\n Imprimindo valores do vetor crescente\n";
+	for(int i = 0; i < N; i++)
+	{
+	cout << vo [i] << " ";
+
+}	
+
+	cout <<"\n Imprimindo valores do vetor crescente\n";
+	for(int i = 0; i < N; i++)
+	{
+	cout << vc [i] << " ";
+
+}	
+
+	cout <<"\n Imprimindo valores do vetor crescente\n";
+	for(int i = 0; i < N; i++)
+	{
+	cout << vd [i] << " ";
+	}
+	
+	
+	}
+
+
+
+
+
+}
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+2-) Desenvolva um programa que carrega em um vetor 10 caracteres entre A e Z de forma aleatória. Seu programa deve 
+mostrar o vetor com os caracteres gerados aleatoriamente.
+*/
+
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+	
+	char v[10];     //v = Vetor
+	int al;         //al = Aleatorio 
+	
+	srand(time(NULL));
+
+	for(int i = 0; i <10; i++)
+	{
+	al = rand() % 26 + 65;
+	v[i] = al;
+	cout << al << "\t" << v[i] << "\n";
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+3-) Desenvolva uma nova versão do seu programa anterior onde seja implementado a saída da quantidade de quantas 
+vogais e quantas consoantes foram geradas aleatóriamente.
+*/
+
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+	char v[10];  //v = Vetor
+	int al;  //al = Aleatorio
+	int cv;  //cv = Conta Vogal
+	int cc;  //cc = Conta Consoante
+	
+	srand(time(NULL));
+	
+	for (int i = 0; i < 10; i++)
+	{
+	al = rand() % 26 + 65;
+	v[i] = al;
+	if((v [i] == 'A') ||
+	if((v [i] == 'E') ||
+	if((v [i] == 'I') ||
+	if((v [i] == 'O') ||
+	if((v [i] == 'U')) 
+	{
+	cv++;
+	}
+	else
+	{
+	cc++;
+	}
+	cout << al << "\t" << v[i] << "\n";
+	}
+	cout << "Foram geradas " << cv <<" vogais\n";
+	cout << "Foram geradas " << cc <<" consoantes\n";
+	
+	
+	
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+
+4-) Programa que carrega um vetor com 10 números inteiros entre 1 e 50 gerados aleatóriamente. Seu programa deve 
+mostrar os 10 números gerados. Além disso,  mostrar separadamente os números pares, números ímpares e números 
+primos, caso existam, repetidos ou não. 
+*/
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+5-) Utilizando a linguagem C++ e a estrutura de matriz, desenvolva um programa que carrega uma matriz quadrada com 
+números aleatório ou fornecidos pelo usuário. Seu programa deve mostrar a matriz carregada originalmente. Além disso,
+deve mostrar os valores que correspondem a diagonal principal e a diagonal secundária, separadamente.
+*/
+
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "Entre com o numero de elementos para linha e coluna: ";
+	cin >> n;
+	
+	int matriz [n] [n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	for(int j = 0 < n; j)
+	  {
+	    matriz [i] [j] = rand() % 6 + 1;
+	  }
+	}
+	
+	
+	
+	
+	
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+6-) Desenvolva uma nova versão do programa anterior e implemente a funcionalidade que soma e mostra a soma dos
+elementos da diagonal principal e da diagonal secundária.
+*/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+7-) Com base em uma matrzi quadrada, desenvolva um programa que carrega os valores nessa matriz, podendo serem
+gerados aleatoriamente ou informados pelo usuário. Seu programa deve mostrar a matriz original e a soma de cada linha
+e de cada uma das colunas da matriz gerada.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

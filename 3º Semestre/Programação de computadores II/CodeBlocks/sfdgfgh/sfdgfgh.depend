@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1625013400 source:c:\users\arauj\desktop\faculdade\3º semestre\programação de computadores ii\codeblocks\sfdgfgh\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

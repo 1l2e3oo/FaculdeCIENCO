@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site para aula de Multimídia">
+    <meta name="author" content="Leonardo Faria Araujo">
+    <meta name="keywords" content="html,html5,css,javascript,banco de dados">
+    <title>Aula de Multimidia</title>
+
+    <script>
+        function validar() {
+            var nome = document.formExemplo.txtNome.value;
+            if (nome == "") {
+                alert("Campo Obrigatorio, digite seu nome");
+                document.formExemplo.txtNome.focus();
+            }
+        }
+
+    </script>
+
+<link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <div>
+        <nav>
+            <!--menu-->>
+            <a href="index.html">HOME</a>|
+            <a href="exemplo1.html">EXEMPLO 1</a>|
+            <a href="exemplo2.html">EXEMPLO 2</a>|
+            <a href="exemplo3.html">EXEMPLO 3</a>|
+            <a href="exemplo4.html">EXEMPLO 4</a>|
+            <a href="exemplo5.html">EXEMPLO 5</a>|
+            <a href="exemplo6.html">EXEMPLO 6</a>|
+            <br>
+            <hr>
+        </nav>
+    </div>
+
+    <div id="estiloForm">
+        <h1>Exemplo de formulario</h1>
+        <form action="cadastro.php" method="post" name="formExemplo">
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="txtNome" id="nome" size="60" placeholder="Digite seu nome completo" required>
+                <span style="color: red;">*</span>
+                <br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="txtSenha" id="senha" size="30" placeholder="Digite sua senha" maxlength="8"
+                    required>
+                <span style="color: red;">*</span>
+            </p>
+            <br><br>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="txtTel" id="telefone" size="20" placeholder="(00)00000-0000" maxlength="14">
+                <br>
+                <label for="email">E-Mail:</label>
+                <input type="email" name="txtEmail" id="email" size="100" placeholder="email@dominio.com" required>
+                <span style="color: red;">*</span>
+            </p>
+            <br><br>
+            <p>
+                <label for="url">Informe seu Linkedim:</label>
+                <input type="url" name="txtUrl" id="url" size="100" placeholder="http://seuendereco.com">
+            </p>
+            <br><br>
+            <p>
+                <label for="nota">Deixe sua Nota de 0 a 10:</label>
+                <input type="number" name="txtNota" id="nota" min="0" max="10" required>
+                <span style="color: red;">*</span>
+
+                <br>
+
+                <label for="avaliacao">Avaliação do Site</label>
+                <input type="range" name="txtAvaliacao" id="avaliacao" min="0" max="10" step="1">
+            </p>
+            <br><br>
+            <p>
+                <label for="data">Data de Nacimento</label>
+                <input type="date" name="txtData" id="data">
+
+                <br>
+
+                <label for="semanaAno">Semana e Ano de Nascimento</label>
+                <input type="month" name="txtSemanaAno" id="semanaAno">
+            </p>
+            <br><br>
+            <p>
+                <label for="hora">Hora de Nascimento</label>
+                <input type="time" name="txtHora" id="hora">
+
+                <br>
+
+                <label for="datahoracompleta">Data Completa</label>
+                <input type="datetime-local" name="txtDataHora" id="datahoracompleta">
+
+            </p>
+
+            <p>
+                <input type="hidden" name="forExemplo" value="cadastroCliente">
+            </p>
+            <br><br>
+            <p>
+                <input type="file" name="txtArquivo" id="arquivo">
+            </p>
+            <br><br>
+            <p>
+                <label for="estadoCivl">Estado Civil:</label> <br>
+                <input class="estiloCheck" type="radio" name="radioEstadoCivil" id="estadoCivil" value="solteiro">Solteiro <br>
+                <input class="estiloCheck" type="radio" name="radioEstadoCivil" id="estadoCivil" value="casado">Casado <br>
+                <input class="estiloCheck" type="radio" name="radioEstadoCivil" id="estadoCivil" value="divorciado">Divorciado <br>
+                <input class="estiloCheck" type="radio" name="radioEstadoCivil" id="estadoCivil" value="viuvo">Viuvo
+            </p>
+            <br><br>
+            <p>
+                <label for="filmesSeries">Filmes e Séries:</label> <br>
+                <input class="estiloCheck" type="checkbox" name="Batman" id="filmesSeries" value="Batman">Batman <br>
+                <input class="estiloCheck" type="checkbox" name="Uncharted" id="filmesSeries" value="Uncharted">Uncharted <br>
+                <input class="estiloCheck" type="checkbox" name="SpiderMan" id="filmesSeries" value="Spiderman">Homem Aranha <br>
+                <input class="estiloCheck" type="checkbox" name="TheWitcher" id="filmesSeries" value="TheWitcher">The Witcher <br>
+                <input class="estiloCheck" type="checkbox" name="Matrix" id="filmesSeries" value="Matrix">Matrix
+            </p>
+
+            <p> <label for="pesquisa">Faça a sua pesquisa:</label>
+                <input type="search" name="txtPesquisa" id="pesquisa">
+            </p>
+            <br><br>
+            <p>
+                <label for="cor">Cor:</label>
+                <input type="color" name="txtCor" id="cor">
+            </p>
+            <br><br>
+            <p>
+                <label for="sugestao">Deixe seu comentário:</label>
+                <textarea name="txtSugestao" maxlength="500" placeholder="Máximo 500 caracteres" id="sugestao" cols="30"
+                    rows="10"></textarea>
+            </p>
+
+            <p>
+                <label for="site">Site:</label>
+                <input type="url" name="txtSite" id="site" list="sites">
+                <datalist id="sites">
+                    <option label="uol" value="https://www.uol.com.br"></option>
+                    <option label="globo" value="https://www.globo.com.br"></option>
+                    <option label="sbt" value="https://www.sbt.com.br"></option>
+                    <option label="band" value="https://www.band.com.br"></option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="estado">Estado:</label>
+                <select name="txtEstado" id="estado">
+                        <option value="sp">São Paulo</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="pr">Paraná</option>
+                        <option value="ce">Ceará</option>
+                        <option value="pe">Pernambuco</option>
+
+                </select>
+            </p>
+
+            <br><br><br>
+
+            <button type="submit">ENVIAR</button> <br>
+            <button type="reset">LIMPAR</button> <br>
+            <button type="button" onclick="validar();">VALIDAR</button>
+
+
+        </form>
+
+            <!--
+        <p>
+            <label for="multiplicao">Multiplicação de 2 valores:</label>
+            <form onsubmit="return false"
+            oninput="resultado.value=valor1.value * value2.value">
+            <input type="number" name="valor1">*
+            <input type="number" name="valor2">=
+            <output name="resultado"></output>
+        </p>
+            -->
+
+    </div>
+
+
+
+    <!--Pular Linha-->
+
+
+    <div>
+        <footer> <!--Rodapé-->
+            <br><br>
+            <address>
+                <h4>Desenvolvido por <abbr title="araujo.leonardo98@yahoo.com.br"> 
+                    <u>Leonardo Faria Araujo</u></abbr> <br>
+                    Visite-nos </h4>
+            </address>
+        
+        <p>
+            <a href="https://www.francomontoro.com.br" target="_blank">
+                Faculdade Municipal Professor Franco Montoro</a>
+        </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

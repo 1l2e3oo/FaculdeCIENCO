@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1585096911 source:c:\users\arauj\desktop\faculdade\logica de programação\codeblocks\calculareajuste\main.cpp
+	<iostream>
+
+1618090878 source:c:\users\arauj\desktop\faculdade\1º semestre\logica de programação\codeblocks\calculareajuste\main.cpp
+	<iostream>
+	<locale>
+

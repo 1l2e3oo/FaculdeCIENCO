@@ -1,0 +1,78 @@
+-- aula 2502
+
+create database bancoPsico
+
+use bancoPsico
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not,
+Email varchar(100),
+DataNascimento date,
+RA int,
+idProfessor int
+)
+alter table Aluno modify column idAluno int auto_increment;
+alter table Aluno modify column Nome varchar(100) not null;
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null,
+RA int not null,
+idProfessor int not null
+)
+
+CREATE TABLE Professor (
+idProfessor int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+Matricula int not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null
+)
+
+CREATE TABLE Consultorio (
+idConsultorio int PRIMARY KEY auto_increment,
+Sala varchar(100) not null
+)
+
+CREATE TABLE Consulta (
+idConsulta int PRIMARY KEY auto_increment,
+Dia date not null,
+Hora datetime not null,
+Observacao varchar(100),
+idConsultorio int not null,
+idPaciente int not null,
+idAluno int not null,
+FOREIGN KEY(idConsultorio) REFERENCES Consultorio (idConsultorio),
+FOREIGN KEY(idAluno) REFERENCES Aluno (idAluno)
+)
+
+alter table Consulta modify column Observacao varchar(100);
+
+desc consulta
+
+CREATE TABLE Paciente (
+idPaciente int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null,
+Genero varchar(10) not null,
+Cidade varchar(100) not null,
+UF varchar(2) not null,
+Bairro varchar(100) not null,
+Numero varchar(20) not null,
+Rua varchar(100) not null
+)
+
+ALTER TABLE Aluno ADD FOREIGN KEY(idProfessor) REFERENCES Professor (idProfessor)
+ALTER TABLE Consulta ADD FOREIGN KEY(idPaciente) REFERENCES Paciente (idPaciente)

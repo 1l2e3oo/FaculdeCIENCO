@@ -1,0 +1,14 @@
+﻿{
+	"DialogTitle" : "Επιλογές JPEG",
+	"Quality" : "Ποιότητα:",
+
+	"QualitySuperb" : "Εξαιρετική",
+	"QualityGood" : "Καλή",
+	"QualityNormal" : "Κανονική",
+	"QualityAverage" : "Μέση",
+	"QualityBad" : "Κακή",
+	"Progressive" : "Προοδευτική (για Web)",
+	"CompressedSize" : "Συμπιεσμένο μέγεθος",
+	"OK" : "Εντάξει",
+	"Cancel" : "Άκυρο"
+}

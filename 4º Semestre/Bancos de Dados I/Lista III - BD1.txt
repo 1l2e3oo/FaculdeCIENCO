@@ -1,0 +1,32 @@
+Exercícios:
+
+Com base nos conceitos e práticas anteriores, desenvolva o que se pede:
+
+1-) A instituição de ensino XYZ deseja criar um cadastro de colaboradores. Desenvolva o modelo conceitual baseado no mini-mundo a segui:
+
+cada instituição poderá ser cadastrada uma única vez;
+uma instituição pode ter vários pólos;
+cada pólo pode ter vários departamentos;
+cada pólo pode ser cadastrado uma única vez;
+um departamento de um pólo pode ter vários colaboradores;
+cada colaborador só pode estar alocado a um pólo.
+
+O modelo conceitual deve conter:
+
+- entidades e respectivos atributos;
+- relacionamentos e seus atributos (se houver);
+- definição do domínio (tipos) para os atributos.
+
+A partir do modelo conceitual, construir o modelo relacional, que deverá conter:
+
+- tabelas;
+- colunas;
+- chave primária de cada tabela;
+- chave estrangeira.
+
+2-) Utilizando os conceitos e práticas sobre transformação entre modelos, derive o modelo relacional a partir dos relacionamentos a seguir:
+
+a) Um colaborador é alocado em um setor e um setor pode alocar um ou muitos colaboradores.
+b) Um pedido é composto por itens e cada item compõe apenas um pedido.
+c) Um colaborador gerencia um setor e um setor pode ser gerenciado por um colaborador.
+d) Um projeto emprega muitos colaboradores e muitos colaboradores sao empregados em um projeto em uma determinada data.

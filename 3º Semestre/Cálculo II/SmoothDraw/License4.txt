@@ -1,0 +1,17 @@
+SmoothDraw 4
+License for use and distribution
+
+1. All copyrights to this software are exclusively owned by the author
+- Qingrui Li.
+
+2. This software is a freeware. You may install, copy, or use it freely without payment.
+
+3. You may redistribute this software provided it contains all the original contents. But without the author's permission, you may not sell it or include it in another product. Specially, the author grants the permission to include this software in companion CDs of magazines.
+
+4. THIS SHAREWARE IS DISTRIBUTED "AS IS".  NO WARRANTY OF ANY
+KIND IS EXPRESSED OR IMPLIED.  YOU USE AT YOUR OWN RISK.
+NEITHER THE AUTHOR NOR THE AGENTS OF THE AUTHOR WILL BE LIABLE 
+FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS
+WHILE USING OR MISUSING THIS SOFTWARE.
+
+Qingrui Li

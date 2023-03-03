@@ -1,0 +1,12 @@
+﻿{
+	"Title" : "更改尺寸",
+	"ResizeImageAndCanvas" : "更改图像和画板尺寸",
+	"ResizeCanvasOnly" : "更改画板尺寸但保持图像大小",
+	"NewSize" : "新尺寸",
+	"Width" : "宽:",
+	"Height" : "高:",
+	"KeepAspectRatio" : "保持纵横比",
+	"Anchor" : "锚点",
+	"OK" : "确定",
+	"Cancel" : "取消"
+}

@@ -1,0 +1,30 @@
+chcp 65001
+:a
+cls
+@echo off
+set e=""
+echo.
+echo ----------------------------------------
+echo 	1- Abrir o Word
+echo 	2- Abrir o Excel
+echo 	3- Sair
+echo ----------------------------------------
+echo.
+echo Digite uma opcao:
+set /p e=
+if %e%==1 goto w:
+if %e%==2 goto x:
+if %e%==3 goto ex:
+echo Algo deu errado, tente novamente!!
+pause
+cls
+goto a
+:w
+start winword.exe
+goto a
+:x
+start excel.exe
+goto a
+:ex
+exit
+

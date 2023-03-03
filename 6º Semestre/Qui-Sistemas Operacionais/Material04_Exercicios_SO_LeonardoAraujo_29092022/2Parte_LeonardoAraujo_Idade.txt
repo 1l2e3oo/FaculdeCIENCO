@@ -1,0 +1,48 @@
+chcp 65001
+:z
+cls
+@echo off
+set N="0"
+set I="0"
+echo Qual é o seu nome?
+set /p N=
+if %N% EQU 0 goto n:
+echo Qual é a sua idade?
+set /p I=
+if %I% LSS 3 goto r:
+if %I% LSS 10 goto c:
+if %I% LSS 18 goto a:
+if %I% LSS 64 goto v:
+if %I% GEQ 64 goto sv:
+echo Algo deu errado, tente novamente!!
+pause
+goto z:
+:n
+Você não tem nome? Tente novamente!!
+pause
+goto z:
+:r
+echo O que você ta fazendo aqui %N%?? Você não tem idade pra ta na frente de um computador!! Volta pro berço!!
+pause
+goto z:
+:c
+echo Bom dia, %N%! Você não vai brincar?
+pause
+goto z:
+:a
+echo Bom dia, %N%! Você não na aula?
+pause
+goto z:
+:v
+echo Bom dia, %N%! Você não vai ao trabalho?
+pause
+goto z:
+:sv
+echo Bom dia, %N%! Você não vai na loterica?
+pause
+goto z:
+
+
+
+
+

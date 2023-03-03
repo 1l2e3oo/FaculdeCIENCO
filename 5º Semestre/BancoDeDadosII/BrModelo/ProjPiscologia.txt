@@ -1,0 +1,209 @@
+create database bancoPsico;
+
+use bancoPsico
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY,
+RA int,
+Nome varchar(100),
+CPF varchar(11),
+Telefone varchar(11),
+Email varchar(100),
+DataNascimento date,
+idProfessor int
+)
+
+alter table Aluno
+modify column idAluno int auto_increment;
+
+desc Aluno
+
+use bancoPsico
+
+drop table Aluno;
+
+drop database bancoPsico
+
+SHOW TABLES;
+
+CREATE TABLE Consulta (
+idConsulta int PRIMARY KEY,
+Data date,
+Hora datetime,
+Observacao varchar(100),
+idConsultorio int,
+idAluno int,
+idPaciente int,
+FOREIGN KEY(idAluno) REFERENCES Aluno (idAluno)
+)
+
+CREATE TABLE Paciente (
+Email varchar(100),
+Nome varchar(100),
+CPF varchar(11),
+idPaciente int PRIMARY KEY,
+DataNascimento date,
+Genero varchar(10),
+Telefone varchar(11),
+UF varchar(2),
+Numero varchar(20),
+Bairro varchar(100),
+Cidade varchar(100),
+Rua varchar(100)
+)
+
+CREATE TABLE Professor (
+idProfessor int PRIMARY KEY,
+Nome varchar(100),
+Matricula int,
+CPF varchar(11),
+Telefone varchar(11),
+Email varchar(100),
+DataNascimento date
+)
+
+
+alter table Professor
+MODIFY idProfessor int auto_increment
+
+CREATE TABLE Consultorio (
+idConsultorio int PRIMARY KEY,
+Sala varchar(100)
+)
+
+ALTER TABLE Aluno ADD FOREIGN KEY(idProfessor) REFERENCES Professor (idProfessor)
+ALTER TABLE Consulta ADD FOREIGN KEY(idConsultorio) REFERENCES Consultorio (idConsultorio)
+ALTER TABLE Consulta ADD FOREIGN KEY(idPaciente) REFERENCES Paciente (idPaciente)
+
+SHOW TABLES;idAluno
+DESC ALUNO
+
+commit;
+
+
+
+-- aula 2502
+
+create database bancoPsico
+
+use bancoPsico
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not,
+Email varchar(100),
+DataNascimento date,
+RA int,
+idProfessor int
+)
+
+alter table Aluno modify column RA int unique;
+alter table Aluno modify column idAluno int auto_increment;
+alter table Aluno modify column Nome varchar(100) not null;
+alter table Aluno modify column CPF varchar(11) unique;
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null,
+RA int not null,
+idProfessor int not null
+)
+
+CREATE TABLE Professor (
+idProfessor int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+Matricula int not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null
+)
+
+alter table Professor modify column Matricula int unique;
+alter table Professor modify column CPF varchar(11) unique;
+
+CREATE TABLE Consultorio (
+idConsultorio int PRIMARY KEY auto_increment,
+Sala varchar(100) not null
+)
+
+CREATE TABLE Consulta (
+idConsulta int PRIMARY KEY auto_increment,
+Dia date not null,
+Hora datetime not null,
+Observacao varchar(100),
+idConsultorio int not null,
+idPaciente int not null,
+idAluno int not null,
+FOREIGN KEY(idConsultorio) REFERENCES Consultorio (idConsultorio),
+FOREIGN KEY(idAluno) REFERENCES Aluno (idAluno)
+)
+
+alter table Consulta modify column Observacao varchar(100);
+
+desc consulta
+
+CREATE TABLE Paciente (
+idPaciente int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null,
+Genero varchar(10) not null,
+Cidade varchar(100) not null,
+UF varchar(2) not null,
+Bairro varchar(100) not null,
+Numero varchar(20) not null,
+Rua varchar(100) not null
+)
+
+alter table Paciente modify column CPF varchar(11) unique;
+
+ALTER TABLE Aluno ADD FOREIGN KEY(idProfessor) REFERENCES Professor (idProfessor)
+ALTER TABLE Consulta ADD FOREIGN KEY(idPaciente) REFERENCES Paciente (idPaciente)
+
+desc Aluno
+
+CREATE TABLE Professor (
+idProfessor int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+Matricula int not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null
+)
+
+select* from Professor
+
+insert into Professor(Nome, Matricula, CPF, Telefone, Email, DataNascimento) values('Meria', '1', '12345678912', '19999999999', 'maria@gmail.com', '1990/10/05');
+
+insert into Professor(Nome, Matricula, CPF, Telefone, Email, DataNascimento) values('Joaquim', '2', '12345678912', '19999999999', 'joaquim@gmail.com', '1985/09/10');
+
+insert into Professor(Nome, Matricula, CPF, Telefone, Email, DataNascimento) values('André', '1', '12345678912', '19999999999', 'andre@gmail.com', '1996/01/30');
+
+insert into Professor(Nome, Matricula, CPF, Telefone, Email, DataNascimento) values('Mariane', '1', '12345678912', '19999999999', 'mariane@gmail.com', '1989/05/08');
+
+insert into Professor(Nome, Matricula, CPF, Telefone, Email, DataNascimento) values('Marta', '1', '12345678912', '19999999999', 'marta@gmail.com', '1999/06/20');
+
+CREATE TABLE Aluno (
+idAluno int PRIMARY KEY auto_increment,
+Nome varchar(100) not null,
+CPF varchar(11) not null,
+Telefone varchar(11) not null,
+Email varchar(100) not null,
+DataNascimento date not null,
+RA int not null,
+idProfessor int not null
+)
+
+select* from Aluno
+
+insert into Aluno(Nome, CPF, Telefone, Email, DataNascimento, RA, idProfessor) values('Leonardo', '12345678912', '19993093557', 'araujo.leonardo98@yahoo.com.br', '2022/03/18', '204874', '3');

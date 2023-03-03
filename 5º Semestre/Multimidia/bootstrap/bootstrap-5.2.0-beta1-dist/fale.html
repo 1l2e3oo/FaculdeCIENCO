@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre carros autônomos</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container" id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Carros Autônomos</h1>
+                <h2>Eles estão chegando</h2>
+                <h3>A INTELIGÊNCIA ARTIFICIAL APLICADA EM CARROS AUTÔNOMOS</h3>
+            </hgroup>
+
+            <img id="icone" src="assests/img/carro1.jpg" alt="Carro 1" height="110" width="150">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="videos.html">Vídeos</a></li>
+                    <li><a href="fale.html">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpofull">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <h1>Saiba tudo sobre carros autônomos</h1>
+                    <h2>by CIENCO - FMPFM</h2>
+                    <h3>Atualizado em 05/05/2022</h3>
+                </header>
+
+                <form id="contatos" action="cadastro.php" method="post">
+                    <fieldset id="usuario">
+                        <legend>Identificação do usuário:</legend>
+                        <p>
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="txtNome" id="nome" size="50" maxlength="50" placeholder="Nome completo">
+                        </p>
+
+                        <p>
+                            <label for="senha">Senha:</label>
+                            <input type="password" name="txtSenha" id="senha" maxlength="8" size="8" placeholder="Senha de oito digitos">
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="txtEmail" id="email" maxlength="50" size="50" placeholder="Digite a senha">
+                        </p>
+
+                        <p>
+                            <fieldset id="genero">
+                                <legend>Sexo:</legend>
+                                <input type="radio" name="txtGenero" id="masc">
+                                <label for="masc">Masculino</label>
+                                <input type="radio" name="txtGenero" id="fem">
+                                <label for="fem">Feminino</label>
+                                <input type="radio" name="txtGenero" id="prefiro">
+                                <label for="prefiro">Prefiro não dizer</label>
+                            </fieldset>
+
+                        </p>
+
+                        <fieldset id="endereco">
+                            <legend>Endereço do usúario</legend>
+                            <p>
+                                <label for="logradouro">Logradouro</label>
+                                <input type="text" name="txtLogradouro" id="logradouro" maxlength="50" size="50" placeholder="Rua..Av..">
+
+                                <label for="numero">Número:</label>
+                                <input type="number" name="txtNumero" id="numero" min="0" max="999999" placeholder="Numero da casa">
+
+                            </p>
+
+                            <p>
+                                <label for="estado">Estado:</label>
+                                <select name="cboestado" id="estado">
+                                    <optgroup label="Região Sudeste">
+                                        <option value="RJ">RJ</option>
+                                        <option value="SP" selected>SP</option>
+                                        <option value="MG">MG</option>
+                                        <option value="ES">ES</option>
+                                    </optgroup>
+
+                                    <optgroup label="Região Sul">
+                                        <option value="RS">RS</option>
+                                        <option value="PR">PR</option>
+                                        <option value="SC">SC</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+
+                            <p>
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" name="txtCidade" id="cidade" placeholder="Digite a cidade" maxlength="50" size="50">
+                            </p>
+
+                            <p>
+                                <label for="dataNasc">Data de Nascimento:</label>
+                                <input type="date" name="txtData" id="dataNasc" placeholder="data de nascimento">
+                            </p>
+
+                            <p>
+                                <button type="submit">ENVIAR</button>
+                                <button type="reset">LIMPAR</button>
+                            </p>
+                        </fieldset> 
+
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+
+        <footer id="rodape"> <br><br><br><br>
+            <p>Copyright 2022 - by 5º SEN - CIENCO <br>
+                <a href="https://www.facebook.com/FaculdadeFrancoMontoro" target="_blank">FACEBOOK</a>
+            </p>
+    
+        </footer>
+    </div>
+</body>
+</html>

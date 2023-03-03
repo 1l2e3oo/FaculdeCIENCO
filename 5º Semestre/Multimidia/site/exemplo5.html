@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site para aula de Multimídia">
+    <meta name="author" content="Leonardo Faria Araujo">
+    <meta name="keywords" content="html,html5,css,javascript,banco de dados">
+    <title>Aula de Multimidia</title>
+
+    <style>
+        table{
+            border-style: ridge;
+        }
+
+        table,
+        td,
+        th {
+            border: 2px solid crimson  
+        }
+
+        h2{
+            text-decoration: underline;
+        }
+    </style>
+
+<link rel="stylesheet" href="css/estilo1.css">
+
+</head>
+
+<body>
+    <div>
+        <nav>
+            <!--menu-->>
+            <a href="index.html">HOME</a>|
+            <a href="exemplo1.html">EXEMPLO 1</a>|
+            <a href="exemplo2.html">EXEMPLO 2</a>|
+            <a href="exemplo3.html">EXEMPLO 3</a>|
+            <a href="exemplo4.html">EXEMPLO 4</a>|
+            <a href="exemplo5.html">EXEMPLO 5</a>|
+            <a href="exemplo6.html">EXEMPLO 6</a>|
+            <br>
+            <hr>
+        </nav>
+    </div>
+
+    <div>
+        <h1>Exemplo de tabelas</h1>
+
+
+        <table>
+            <tr><th>A</th><th>C</th></tr>
+            <tr><th>B</th><th>D</th></tr>
+        </table>
+
+
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Leonardo</td>
+                    <td>Rua 1</td>
+                    <td>Mogi Guaçu</td>
+                    <td>SP</td>
+                    <td>(19)993093557</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Rua 2</td>
+                    <td>Mogi Guaçu</td>
+                    <td>SP</td>
+                    <td>(19)999999999</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>Rua 9</td>
+                    <td>Mogi Mirim</td>
+                    <td>SP</td>
+                    <td>(19)888888888</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        Dados Pessoais do Funcionario
+
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2>Tabela Vertical</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <td>Leonardo</td>
+                <td>João</td>
+                <td>Andre</td>
+                <td>Julia</td>
+                <td>Joaquim</td>
+                <td>Leticia</td>
+            </tr>
+            <tr>
+                <th>Sobrenome</th>
+                <td>Araujo</td>
+                <td>Santos</td>
+                <td>Silva</td>
+                <td>Souza</td>
+                <td>Moraele</td>
+                <td>Morais</td>
+            </tr>
+
+
+        </table>
+
+        <h2>Tabela com legenda</h2>
+        <table>
+            <caption>Legenda da tabela</caption>
+            <tr>
+                <th>Mês</th>
+                <th>Gastos</th>
+            </tr>
+            <tr>
+                <th>Janeiro</th>
+                <th>R$ 2500.00</th>
+            </tr>
+            <tr>
+                <th>Fevereiro</th>
+                <th>R$ 2800.00</th>
+            </tr>
+            <tr>
+                <th>Março</th>
+                <th>R$ 3500.00</th>
+            </tr>
+        </table>
+
+        <h2>Tabela dentro da tabela</h2>
+        <table>
+            <tr>
+                <td>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus repellat at libero
+                        necessitatibus ea! Laboriosam voluptatem, officiis omnis aspernatur corporis quod adipisci
+                        minima sapiente aut sint consectetur architecto itaque.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis optio unde illo esse
+                        provident maxime omnis beatae, ea explicabo, blanditiis quia qui laboriosam quisquam est. Quidem
+                        quasi commodi doloribus rerum?</p>
+                </td>
+                <td>
+                    Tabela dentro a tabela
+                    <table>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+
+        <h2>Lista não ordenada dentro da tabela</h2>
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Maça</li>
+                        <li>Limão</li>
+                        <li>Bananas</li>
+                        <li>Abacaxi</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+    <br><br><br>     <!--Pular Linha-->
+    <div>
+        <footer> <!--Rodapé-->
+            <br><br>
+            <address>
+                <h4>Desenvolvido por <abbr title="araujo.leonardo98@yahoo.com.br"> 
+                    <u>Leonardo Faria Araujo</u></abbr> <br>
+                    Visite-nos </h4>
+            </address>
+        
+        <p>
+            <a href="https://www.francomontoro.com.br" target="_blank">
+                Faculdade Municipal Professor Franco Montoro</a>
+        </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

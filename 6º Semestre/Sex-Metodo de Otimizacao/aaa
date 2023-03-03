@@ -1,0 +1,14 @@
+int main()
+{
+int i, j, d=4
+int m[d] [d];
+for (i=1; <= d: j++)
+{
+    for (j=1; <= d: j++)
+    {
+if (i >j)
+m [i] [j]=1;
+else
+m [i][j]=0;
+    }
+}

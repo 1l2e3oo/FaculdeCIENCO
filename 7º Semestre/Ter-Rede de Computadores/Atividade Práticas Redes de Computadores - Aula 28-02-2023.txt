@@ -1,0 +1,42 @@
+1-) Utilizando o Sofware Packet Tracer da Cisco, vamos criar um ambiente de rede considerando as seguintes Topologias:
+
+a) Barramento;
+b) Árvore;
+c) Anel;
+d) Estrela;
+e) Hibrida.
+
+Detalhes para a construção e configuração de cada uma das topologias:
+
+Barramento: deverá conter pelo menos 5 computadores, um deles deverá ser servidor DHCP. Para simular esta topologia, utilizaremos Hub's. Ah, lembra dos conceitos sobre tipo de cabeamento 
+(direto ou crossover)?, vamos usar eles agora... Para conectar os Hubs deveremos utilizar os cabos do tipo crossover (são dispositivos iguais). Para a conexão dos micros aos Hubs vamos 
+utilizar o cabo direto (são dispositivos diferentes). O IP do servidor DHCP será de classe C 192.168.1.1, e a atribuação deverá iniciar a partir do IP 192.168.1.11 com limite de 10 
+dispositivos. Após construção e configuração da topologia, testar a comunicação entres os Hosts.
+
+
+
+Árvore: Esta topologia deverá considerar 4 computadores. Para esta topologia escolhemos fazer a atribuição manual dos números IP's. Para tanto, considere a classe C e IP na faixa de 
+192.168.2.1. Após construção e configuração da topologia, testar a comunicação entres os Hosts.
+
+
+
+
+Anel: Para desenvolver esta topologia vamos considerar a utilização de 5 switchs 2640 e 2 computadores. Os IP's vão ser atribuídos manualmente, começando por 192.168.3.1. Além do IP e 
+máscara 255.255.255.0, configure também o gateway com o IP 192.168.3.254
+
+
+
+Estrela: deverá conter pelo menos 5 computadores (sendo um deles um servidor DHCP). O IP do servidor DHCP será de classe C 192.168.0.1, e a atribuação deverá iniciar a partir do 
+IP 192.168.0.11 com limite de 10 dispositivos. Após construção e configuração da topologia, testar a comunicação entres os Hosts. Nesse caso, vamos configurar o gateway no servidor 
+como 192.168.0.254 (que é o último endereço disponível para este range).
+
+
+
+Híbrida: Para criar uma rede híbrida, faça a ligação da rede de topologia Estrela e de topologia anel. Para isto, será necesário utilizar um roteador, vamos escolher o modelo 2811. 
+será necessário configurar cada uma das suas duas interfaces f 0/0 e f 0/1 com os endereços de gateway de cada uma das redes que você irá concectar. Note que o roteador está 
+desligado (up). Além disso, será necessário indicar/habilitar o protocolo de roteamento e endereços de redes, que no caso são 192.168.0.1 (veja que ele considera o primeiro endereço 
+que é o endereço de rede, para ambos os IP's, que são 192.168.0.0 e 192.168.3.0, respectivamente.
+
+
+
+192.168.0.1

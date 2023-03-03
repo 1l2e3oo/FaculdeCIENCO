@@ -1,0 +1,252 @@
+/* Desenvolva um programa que utiliza 
+um procedimento iterativo que retorna números de 1 a 10
+*/
+Robson Canato19:59
+/* Desenvolva um programa que utiliza
+um procedimento iterativo que retorna números de 1 a 10
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void mostrarNumeros(int num);
+
+int main()
+{
+    mostrarNumeros(10);
+}
+
+void mostrarNumeros(int num)
+{
+    for(int i = 1; i <= num; i++)
+    {
+        cout << i << " ";
+    }
+}
+Amanda Rieko Matsuda20:00
+Deu certo, obrigada!
+Robson Canato20:13
+/*
+Desenvolva um programa que utiliza uma função de forma iterativa
+para calcular o valor do fatorial de um número inteiro. 
+*/
+Robson Canato20:17
+/*
+Desenvolva um programa que utiliza uma função de forma recursiva
+para calcular o valor do fatorial de um número inteiro.
+*/
+---------------
+Já resolvidos:
+--------------------------------------
+/* Desenvolva um programa que utiliza
+um procedimento iterativo que retorna números de 1 a 10
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void mostrarNumeros(int num);
+
+int main()
+{
+    mostrarNumeros(10);
+}
+
+void mostrarNumeros(int num)
+{
+    for(int i = 1; i <= num; i++)
+    {
+        cout << i << " ";
+    }
+}
+--------------------------------------------------
+/* Desenvolva um programa que utiliza
+um procedimento recursivo que retorna números de 1 a 10
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void mostrarNumeros(int num, int contador);
+
+int main()
+{
+    mostrarNumeros(10, 1);
+}
+
+void mostrarNumeros(int num, int contador)
+{
+    cout << contador << " ";
+    if(num > contador){
+        mostrarNumeros(num, ++contador);
+    }
+}
+Robson Canato20:18
+------------------------------------------------------------------
+Robson Canato21:17
+----------------------------------
+/*
+Desenvolva um programa que utiliza uma função de forma iterativa
+para calcular o valor do fatorial de um número inteiro.
+*/
+#include <iostream>
+
+using namespace std;
+
+int fatorial(int num);
+
+int main()
+{
+    int num = 6;
+    cout << fatorial(num);
+}
+int fatorial(int num)
+{
+    int fat = 1;
+    for(int i = 1; i <= num; i++){
+        fat = fat * i;
+    }
+    return fat;
+}
+------------------------------------------------------------
+/*
+Desenvolva um programa que utiliza uma função de forma recursiva
+para calcular o valor do fatorial de um número inteiro.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int fatorial(int num);
+
+int main()
+{
+    int num;
+
+    cout <<"Fatorial de qual número?: ";
+    cin >> num;
+
+    cout << fatorial(num);
+}
+
+int fatorial(int num)
+{
+    if(num <= 1){
+        return 1;
+    }
+    else{
+        return num * fatorial(num - 1);
+    }
+}
+Robson Canato21:21
+/*
+Desenvolva um programa que utiliza uma função recursiva para efetuar a soma dos
+números inteiros de 1 a N (soma do intervalo), considerando que N é um número inteiro
+positivo fornecido pelo usuário.
+*/
+Robson Canato21:28
+/*
+Desenvolva um programa que utiliza uma função recursiva para efetuar a soma dos
+números inteiros de 1 a N (soma do intervalo), considerando que N é um número inteiro
+positivo fornecido pelo usuário.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int somarIntervalo(int numero);
+
+int main()
+{
+    cout << somarIntervalo(10);
+}
+
+int somarIntervalo(int numero)
+{
+    if(numero == 1){
+        return 1;
+    }
+    else{
+        return numero + somarIntervalo(numero - 1);
+    }
+}
+Robson Canato21:36
+--------------------
+/*
+Desenvolva um programa que utiliza uma função recursiva para calcular o mostrar um
+determinado termo da seqüência de Fibonacci com base em um número inteiro fornecido
+pelo usuário. Seu programa deve considerar que o primeiro e o segundo termo valem 1.
+*/
+Robson Canato21:53
+-----------------------------
+/*
+Desenvolva um programa que utiliza uma função recursiva para calcular o mostrar um
+determinado termo da seqüência de Fibonacci com base em um número inteiro fornecido
+pelo usuário. Seu programa deve considerar que o primeiro e o segundo termo valem 1.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int calculoFibo(int termo);
+
+int main()
+{
+    int termo = 10;
+    int fibo;
+
+    fibo = calculoFibo(termo -1);
+
+    cout << fibo << " ";
+}
+
+int calculoFibo(int termo)
+{
+    if (termo == 0 || termo =
+Robson Canato21:58
+-------------------------
+/*
+Desenvolva um programa que utiliza uma função recursiva para calcular a potencia.
+Seu programa deve solicitar ao usuário o valor da base e do expoente. Caso o expoente
+seja 0, seu programa deve retornar 1. Mostrar a base, o expoente e o resultado.
+*/
+Robson Canato22:23
+----------------------------------
+int calcularPotencia(int base, int potencia)
+-------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int calcularPotencia(int base, int potencia);
+
+int main()
+{
+    int base, expoente, resultado;
+
+    cout <<"Entre com a base: ";
+    cin >> base;
+
+    cout <<"Entre com o expoente: ";
+    cin >> expoente;
+
+    resultado = calcularPotencia(base, expoente);
+
+    cout <<"Base: " << base <<" Expoente: " << expoente <<" Resultado: " << resultado;
+}
+Robson Canato22:24
+int calcularPotencia(int base, int expoente)
+{
+    if(expoente == 0){
+        return 1;
+    }
+    else{
+        return base * calcularPotencia(base, expoente - 1);
+    }
+}

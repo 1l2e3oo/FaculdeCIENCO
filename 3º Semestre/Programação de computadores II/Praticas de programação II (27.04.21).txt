@@ -1,0 +1,82 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilizando os recursos apresentados e revisados da linguagem C++, desenvolva as práticas de programação a seguir:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+1-) Programa que carrega e mostra uma matriz simétrica. Lembre-se que a matriz simétrica 
+segue algumas propriedades fundamentais, que são:
+
+- Necessita ser uma matriz quadrada;
+- A transposta da matriz M, dada por M' é igual a matriz original M.
+
+Veja alguns exemplos a seguir:
+
+X   Y 
+Y   X
+
+0   1   0
+1   0   1
+0   1   0
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+2-) Programa que gere aleatoriamente um número inteiro no intervalo de 1 a 10,  solicita ao usuário até três números 
+inteiros (uma tentativa por vez) e verifica se o usuário adivinhou o número gerado aleatoriamente. Caso o usuário 
+adivinhe o número gerado, mostrar a mensagem:
+
+"Parabéns, o número sorteado foi: ___"; onde (___) corresponde ao número sorteado. Seu programa deve mostrar
+também em qual tentativa o usuário adivinhou o número. 
+
+Caso o usuário não acerte o número gerado em uma das três tentativas (palpites), o programa deve mostrar o número 
+que foi sorteado e a mensagem: 
+
+"Você não adivinhou o número entre 1 e 10 gerado aleatoriamente!".
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+3-) Desenvolva um programa que gera aleatóriamente 10 idades entre 1 e 100 anos. Além disso, ao gerar essa idade, atribuir
+a uma faixa etária que segue o seguinte padrão: Faixa etária 1 (1 a 18 anos), Faixa etária 2 (19 a 40 anos) e 
+Faixa etária 3 (41 a 100 anos). Ao final, seu programa deve mostrar qual o percentual de cada uma das três faixas. Dessa forma,
+supondo que foram atribuídos 3, 2 e 5, respectivamente para as faixas 1, 2 e faixa 3, a saída do seu programa deve ser algo
+similar a:
+
+Faixa etária 1: 30.00%
+Faixa etária 2: 20.00%
+Faixa etária 3: 50.00%
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+4-) Desenvolva uma nova versão do programa anterior que implemente a saída da porcentagem em formato de gráfico, 
+ou seja, um sinal de #, por exemplo para cada uma das ocorrências da idade dentro de cada faixa. Dessa forma,
+considerando que a saída para a faixa 1, faixa 2 e faixa 3 tenha sido 3, 2 e 5, respectivamente, seu programa deverá
+mostrar algo similar a:
+
+Faixa etária 1 (1 a 18 anos)..........: # # # 
+Faixa etária 2 (19 a 40 anos)........: # #
+Faixa etária 3 (41 a 100 anos)......: # # # # #
+
+Observação: caso não tenha nenhum valor para uma determinada faixa, o rótulo para a faixa em questão deve ser omitido.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+5-) Utilizando a estrutura for e while, desenvolva um programa que calcula e mostra todas as tabuadas de 1 até 10.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+6-) Criar um procedimento que calcula e mostra todos os quadrados no intervalo entre 1 e um limite superior fornecido
+pelo usuário. Seu programa deve fazer a consistência para que o valor limite seja maior ou igual a 1.
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

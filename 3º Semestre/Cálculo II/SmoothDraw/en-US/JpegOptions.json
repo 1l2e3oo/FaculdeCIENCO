@@ -1,0 +1,14 @@
+﻿{
+	"DialogTitle" : "JPEG Options",
+	"Quality" : "Quality:",
+
+	"QualitySuperb" : "Superb",
+	"QualityGood" : "Good",
+	"QualityNormal" : "Normal",
+	"QualityAverage" : "Average",
+	"QualityBad" : "Bad",
+	"Progressive" : "Progressive (for Web)",
+	"CompressedSize" : "Compressed Size",
+	"OK" : "OK",
+	"Cancel" : "Cancel"
+}

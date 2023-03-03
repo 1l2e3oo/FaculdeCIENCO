@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    color: rgb(49, 52, 255);
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+a, p, td, th, table{
+    color: white;
+    margin-left: 20px;
+}
+
+u{
+    color: rgb(255, 0, 0);
+    margin-left: 20px;   
+}
+
+.estilizaRodape{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+#estilizaLargura{
+    max-width: 500px;
+    height: 100px;
+    background-color: powderblue;
+}
+
+#efeitoParagrafo{
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+#estiloFamilia1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#estiloFonte1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#estiloFonte2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#estiloFogo{
+    font-family: "Sofia", sans-serif;
+}
+
+.efeito{
+    font-family: "Sofia", sans-serif;
+}
+
+.estilizaLink:active{
+    color: blue;
+}
+
+.estilizaLink:hover{
+    color: hotpink;
+}
+
+.estilizaLink:visited{
+    color: yellow;
+}
+
+
+
+
+
+/* 
+Isso é um comentario
+*/
+
+
